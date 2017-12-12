@@ -1,0 +1,239 @@
+/* 12 Column Grid Built with Flexbox */
+
+.wrapper,
+.wrapper-full {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.wrapper-full {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100vw;
+    background: inherit;
+    z-index: -1;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+/* Big thanks to w3schools for their responsive design info! */
+
+[class*="col-"] {
+  width: calc(100%);
+  padding: 1rem;
+}
+
+.col-0 {width: 0; padding: 0;}
+.col-1 {width: calc(100% / 12);}
+.col-2 {width: calc(100% / 12 * 2);}
+.col-3 {width: calc(100% / 12 * 3);}
+.col-4 {width: calc(100% / 12 * 4);}
+.col-5 {width: calc(100% / 12 * 5);}
+.col-6 {width: calc(100% / 12 * 6);}
+.col-7 {width: calc(100% / 12 * 7);}
+.col-8 {width: calc(100% / 12 * 8);}
+.col-9 {width: calc(100% / 12 * 9);}
+.col-10 {width: calc(100% / 12 * 10);}
+.col-11 {width: calc(100% / 12 * 11);}
+.col-12 {width: calc(100%);}
+
+
+@media only screen and (min-width: 768px) {
+  .col-md-0 {width: 0; padding: 0;}
+  .col-md-1 {width: calc(100% / 12);}
+  .col-md-2 {width: calc(100% / 12 * 2);}
+  .col-md-3 {width: calc(100% / 12 * 3);}
+  .col-md-4 {width: calc(100% / 12 * 4);}
+  .col-md-5 {width: calc(100% / 12 * 5);}
+  .col-md-6 {width: calc(100% / 12 * 6);}
+  .col-md-7 {width: calc(100% / 12 * 7);}
+  .col-md-8 {width: calc(100% / 12 * 8);}
+  .col-md-9 {width: calc(100% / 12 * 9);}
+  .col-md-10 {width: calc(100% / 12 * 10);}
+  .col-md-11 {width: calc(100% / 12 * 11);}
+  .col-md-12 {width: calc(100%);}
+}
+
+@media only screen and (min-width: 1024px) {
+  .col-lg-0 {width: 0; padding: 0;}
+  .col-lg-1 {width: calc(100% / 12);}
+  .col-lg-2 {width: calc(100% / 12 * 2);}
+  .col-lg-3 {width: calc(100% / 12 * 3);}
+  .col-lg-4 {width: calc(100% / 12 * 4);}
+  .col-lg-5 {width: calc(100% / 12 * 5);}
+  .col-lg-6 {width: calc(100% / 12 * 6);}
+  .col-lg-7 {width: calc(100% / 12 * 7);}
+  .col-lg-8 {width: calc(100% / 12 * 8);}
+  .col-lg-9 {width: calc(100% / 12 * 9);}
+  .col-lg-10 {width: calc(100% / 12 * 10);}
+  .col-lg-11 {width: calc(100% / 12 * 11);}
+  .col-lg-12 {width: calc(100%);}
+}
+
+// Navbar Groups and Elements
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-large {
+  display: none;
+}
+.nav-small {
+  
+  align-items:flex-start;
+}
+
+.nav-group {
+  flex: 1 1 100%;
+}
+
+.nav-group * {
+  line-height: 1;
+}
+
+.group-center {
+  text-align: center;
+}
+
+.group-right {
+  text-align: right;
+}
+
+.top-nav {
+ padding: 1rem;
+}
+
+#dropdown-menu {
+  background-color: inherit;
+  color: inherit;
+  display: none;
+  position: absolute;
+  top: 5.2rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-top: -1rem;
+  padding: 0 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+  li {
+    padding: 1rem 0;
+    &:hover {
+      background-color: rgba(200,200,200,0.1);
+    }
+  }  
+}
+
+@media only screen and (min-width: 786px) {
+  .nav-large {
+    display: flex;
+  }
+  .nav-small {
+    display: none;
+  }
+}
+
+/* Section Styling */
+
+.footer {
+  padding: 2rem 1rem;
+  div {
+    padding: .5rem 0;
+  }
+}
+
+/* Form Styling */
+
+form {
+  font-size: 1.6rem;
+}
+
+.form-center {
+  margin: auto;
+}
+
+fieldset * {
+  display: block;
+}
+ 
+label {
+  line-height: 3.2rem;
+}
+
+input[type=text],
+input[type=submit],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgba(200,200,200,0.5);
+}
+
+textarea {
+  height: 7.2rem;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: .5rem;
+  border-radius: .4rem;
+}
+
+// Card
+
+.card {
+  width: 100%;
+  align-self: stretch;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+}
+
+.card-text {
+  padding: 2rem;
+}
+
+.btn {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  padding: 1rem;
+  margin: 1rem 0;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-default {
+  background-color: dodgerblue; 
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
